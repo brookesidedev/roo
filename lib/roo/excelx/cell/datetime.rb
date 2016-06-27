@@ -84,10 +84,7 @@ module Roo
 
         def create_datetime(base_date, value)
           date = base_date + value.to_f.round(6)
-          datetime_string = date.strftime('%Y-%m-%d %H:%M:%S.%N')
-          t = round_datetime(datetime_string)
-
-          ::DateTime.civil(t.year, t.month, t.day, t.hour, t.min, t.sec)
+          date.strftime('%m/%d/%Y')
         end
 
         def round_datetime(datetime_string)

@@ -18,9 +18,7 @@ module Roo
 
         def create_date(base_date, value)
           date = base_date + value.to_i
-          yyyy, mm, dd = date.strftime('%Y-%m-%d').split('-')
-
-          ::Date.new(yyyy.to_i, mm.to_i, dd.to_i)
+          yyyy, mm, dd = date.strftime('%m/%d/%Y')
         end
       end
     end
